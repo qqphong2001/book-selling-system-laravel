@@ -65,7 +65,11 @@ Route::group(['middleware' => ['auth']], function() {
             //product
             Route::get('/list_product',[AdminController::class,'list_product'])->name('list_product');
             Route::post('/add_product',[ProductController::class,'add_product']);
-            Route::get('/delete_product',[AdminController::class,'list_product']);
+            Route::get('/delete_product/{id}',[ProductController::class,'detele_product']);
+            Route::get('/edit_product/{id}',[ProductController::class,'edit_product']);
+            Route::post('/update_product/{id}',[ProductController::class,'update_product']);
+
+
 
 
             //publisher

@@ -227,49 +227,48 @@
                                         <th>ID</th>
                                         <th>Title</th>
                                         <th>Unit Price</th>
-                                        <th>Untit Stock</th>
+                                        <th>Unit Stock</th>
                                         <th>Cover</th>
                                         <th>Available</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    @foreach($books as $book)
                                     <tr class="product-container-">
-                                        <td></td>
-                                        <td style="text-transform: capitalize"> </td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$book->id}}</td>
+                                        <td style="text-transform: capitalize">{{$book->title}} </td>
+                                        <td>{{$book->unitPrice}}</td>
+                                        <td>{{$book->unitStock}}</td>
 
                                         <td style="vertical-align: middel">
-                                            <img src="" alt="" width="100px" height="100px">
+                                            <img src="{{$book->cover}}" alt="" width="100px" height="100px">
                                         </td>
                                         <td>
-                                            yes
+                                            {{$book->unitStock > 0 ? 'Yes' : 'No'}}
                                         </td>
 
                                         <td>
                                             <button class="btn btn-info" >
 
-                                                <a href="{{ url('admin/detail-product/') }}">Detail </a>
+                                                <a href="{{ url('admin/detail_product/'.$book->id) }}">Detail </a>
 
 
                                             </button>
 
                                             <button class="btn btn-success">
-                                                <a href="{{ url('admin/edit-product/') }}">Edit </a>
+                                                <a href="{{ url('admin/edit_product/'.$book->id) }}">Edit </a>
 
                                             </button>
 
                                             <button class="btn btn-danger">
 
-                                                <a href="{{ url('admin/delete-product/') }}">Delete</i></a>
+                                                <a href="{{ url('admin/delete_product/'.$book->id) }}">Delete</i></a>
 
                                             </button>
                                         </td>
                                     </tr>
-
-
+                                    @endforeach
 
                                 </tbody>
 

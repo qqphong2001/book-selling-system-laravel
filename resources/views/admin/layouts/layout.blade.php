@@ -356,6 +356,40 @@
             });
         });
     </script>
+      <script>
+        function preview_images() {
+            var total_file = document.getElementById("photo").files.length;
+            for (var i = 0; i < total_file; i++) {
+                $('#image_preview').append(`
+                <div class='col-md-3'>
+                    <img style='width:100%;height:100px' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
+                </div>`);
+            }
+        }
+
+        function preview_imagess() {
+            var total_file = document.getElementById("photos").files.length;
+            for (var i = 0; i < total_file; i++) {
+                $('#image_previews').append(`
+                <div class='col-md-3'>
+                    <img style='width:100%;height:100px' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
+                </div>`);
+            }
+        }
+
+       
+
+        function resetForm() {
+            $("#image_preview").html("");
+            return true;
+        }
+    </script>
+    <script>
+        $(function() {
+            $("#Datepicker").datepicker();
+            $("#endDatepicker").datepicker();
+        });
+    </script>
 
 </body>
 

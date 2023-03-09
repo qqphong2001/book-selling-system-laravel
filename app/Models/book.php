@@ -25,7 +25,7 @@ class book extends Model
         'hSize',
         'wSize',
         'unitPrice',
-        'untitStock',
+        'unitStock',
         'ranking',
         'discount',
         'cover',

@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\Homcontroller;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\VerificationController;
 use Illuminate\Auth\Notifications\VerifyEmail;
@@ -63,6 +64,9 @@ Route::group(['middleware' => ['auth']], function() {
 
             //product
             Route::get('/list_product',[AdminController::class,'list_product'])->name('list_product');
+            Route::post('/add_product',[ProductController::class,'add_product']);
+            Route::get('/delete_product',[AdminController::class,'list_product']);
+
 
             //publisher
             Route::get('/list_publisher',[AdminController::class,'list_publisher'])->name('list_publisher');

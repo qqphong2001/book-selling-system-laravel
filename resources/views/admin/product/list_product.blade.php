@@ -43,8 +43,8 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="post" action="{{ url('admin/add-product') }}"
-                                                enctype="multipart/form-data">
+                                            <form method="post" action="{{ url('admin/add_product') }}"
+                                            enctype="multipart/form-data">
                                                 <!-- form start -->
                                                 @csrf
                                                 {{-- <div class="card-body"> --}}
@@ -87,7 +87,7 @@
                                                         <div class="form-group">
                                                             <div class="form-group">
                                                                 <label for="">Layout</label>
-                                                                <select name="status" class="form-control" required>
+                                                                <select name="layout" class="form-control" required>
                                                                     <option value="Paperback">Paperback</option>
                                                                     <option value="Hardcover">Hardcover</option>
                                                                 </select>
@@ -99,12 +99,24 @@
                                                 <div class="">
                                                     <div class="col-sm-6" style="padding: unset;">
                                                         <label for="">Cover</label>
-                                                        <input type="file" name="photo[]" id="photo"
-                                                            onchange="preview_images();" multiple>
+                                                        <input type="file" name="photo" id="photo"
+                                                            onchange="preview_images();">
                                                     </div>
-                                                    <div class="row" id="image_preview"></div>
+                                                    <div class="row" id="image_preview" style="height50px"> </div>
 
                                                 </div>
+
+                                                <div class="my-3">
+                                                    <div class="col-sm-6" style="padding: unset;">
+                                                        <label for="">Thumbnail</label>
+                                                        <input type="file" name="thumnails[]" id="photos"
+                                                            onchange="preview_imagess();" multiple>
+                                                    </div>
+                                                    <div class="row" id="image_previews" style="height50px"></div>
+
+                                                </div>
+
+
 
                                                 <div class="row">
                                                     <div class="col-sm-6">
@@ -156,7 +168,36 @@
                                                     </div>
                                                 </div>
 
-
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="">Discount</label>
+                                                            <input type="text" name="discount"
+                                                            class="form-control" required>
+                                                        </div>
+                                                    </div>  <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="">Publisher</label>
+                                                            <input type="text" name="publisher"
+                                                            class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="">Author</label>
+                                                            <input type="text" name="author"
+                                                            class="form-control" required>
+                                                        </div>
+                                                    </div>  <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label for="">Genre</label>
+                                                            <input type="text" name="genre"
+                                                            class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
                                                 <div class="form-group ">
                                                     <label>Description</label>
@@ -166,7 +207,7 @@
                                                 <!-- /.card-body -->
 
                                                 <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="submit" class="btn btn-primary">Add</button>
                                                 </div>
 
                                             </form>
@@ -265,7 +306,17 @@
             for (var i = 0; i < total_file; i++) {
                 $('#image_preview').append(`
                 <div class='col-md-3'>
-                    <img style='width:100%' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
+                    <img style='width:100%;height:100px' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
+                </div>`);
+            }
+        }
+
+        function preview_imagess() {
+            var total_file = document.getElementById("photos").files.length;
+            for (var i = 0; i < total_file; i++) {
+                $('#image_previews').append(`
+                <div class='col-md-3'>
+                    <img style='width:100%;height:100px' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
                 </div>`);
             }
         }

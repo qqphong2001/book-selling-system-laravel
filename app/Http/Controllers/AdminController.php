@@ -29,7 +29,7 @@ class AdminController extends Controller{
             'books' => book::get(),
             'authors'=>author::get(),
             'genres'=>genre::get(),
-            'publisher'=>publisher::get()
+            'publishers'=>publisher::get()
 
         ];
 

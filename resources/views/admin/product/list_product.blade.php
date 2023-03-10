@@ -179,28 +179,68 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
+
+
                                                         <div class="form-group">
                                                             <label for="">Publisher</label>
-                                                            <input type="text" name="publisher" class="form-control"
-                                                                required>
+                                                            <div class="input-options">
+                                                                <input type="text" name="publisher" value="0"
+                                                                    hidden>
+                                                                <input type="text" class="form-control publisher-text"
+                                                                    value="">
+                                                                <div class="options" id="publisher-options">
+                                                                    @foreach ($publishers as $publisher)
+                                                                        <div class="option" id="{{ $publisher->id }}">
+                                                                            {{ $publisher->name }}</div>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
                                                         </div>
+
+
+
+
                                                     </div>
                                                 </div>
                                                 <div class="row">
+
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
                                                             <label for="">Author</label>
-                                                            <input type="text" name="author" class="form-control"
-                                                                required>
+                                                            <div class="input-options">
+                                                                <input type="text" name="author" value="0"
+                                                                    hidden>
+                                                                <input type="text" class="form-control author-text"
+                                                                    value="">
+                                                                <div class="options" id="author-options">
+                                                                    @foreach ($authors as $author)
+                                                                        <div class="option" id="{{ $author->id }}">
+                                                                            {{$author->name}}</div>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
                                                             <label for="">Genre</label>
-                                                            <input type="text" name="genre" class="form-control"
-                                                                required>
+                                                            <div class="input-options">
+                                                                <input type="text" name="genre" value="0"
+                                                                    hidden>
+                                                                <input type="text" class="form-control genre-text"
+                                                                    value="">
+                                                                <div class="options" id="genre-options">
+                                                                    @foreach ($genres as $genre)
+                                                                        <div class="option" id="{{ $genre->id }}">
+                                                                            {{ $genre->name }}</div>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
+
+
                                                 </div>
 
                                                 <div class="form-group ">
@@ -270,7 +310,8 @@
 
                                                 <button class="btn btn-danger">
 
-                                                    <a href="{{ url('admin/delete_product/' . $book->id) }}">Delete</i></a>
+                                                    <a
+                                                        href="{{ url('admin/delete_product/' . $book->id) }}">Delete</i></a>
 
                                                 </button>
                                             </td>
@@ -364,8 +405,7 @@
                                                 <div class="col-sm-6" style="padding: unset;">
                                                     <label for="">Thumbnail</label>
                                                 </div>
-                                                <div class="row" id="image_previewss"
-                                                   >
+                                                <div class="row" id="image_previewss">
 
                                                 </div>
 

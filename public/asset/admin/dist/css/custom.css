@@ -1,0 +1,22 @@
+.input-options {
+  width: 100%;
+  position: relative;
+}
+
+.options {
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  position: absolute;
+  z-index: 99;
+}
+
+.options .option {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.options .option:hover {
+  background-color: #dee4ea;
+}

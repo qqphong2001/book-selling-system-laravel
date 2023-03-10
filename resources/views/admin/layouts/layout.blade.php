@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | Dashboard</title>
+    <link rel="stylesheet" href="{{asset('asset/admin/dist/css/custom.css')}}">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -331,6 +332,8 @@
     <script src="<?php echo (asset('asset')); ?>/admin/plugins/jszip/jszip.min.js"></script>
     <script src="<?php echo (asset('asset')); ?>/admin/plugins/pdfmake/pdfmake.min.js"></script>
     <script src="<?php echo (asset('asset')); ?>/admin/plugins/pdfmake/vfs_fonts.js"></script>
+
+    <script src="{{asset('asset/admin/build/js/Custom.js')}}"></script>
 
     {{-- {{-- <script src="<?php echo (asset('asset')); ?>/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script> --}}
     {{-- <script src="<?php echo (asset('asset')); ?>/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script> --}}

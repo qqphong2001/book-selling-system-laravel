@@ -39,7 +39,7 @@ class AccountController extends Controller{
             'email' =>$request->input('email'),
             'password' =>$request->input('password'),
             'role_id'=> 2,
-            'status' => 1
+        
         ],$remember)){
 
             return redirect()->route('admin');

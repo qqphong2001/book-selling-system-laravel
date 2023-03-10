@@ -193,10 +193,10 @@
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/admin/list-gallery')}}" class="nav-link">
+                            <a href="{{url('/admin/list_account')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Gallery
+                                    Account
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -377,7 +377,7 @@
             }
         }
 
-       
+
 
         function resetForm() {
             $("#image_preview").html("");
@@ -389,6 +389,12 @@
             $("#Datepicker").datepicker();
             $("#endDatepicker").datepicker();
         });
+    </script>
+
+    <script>
+
+
+
     </script>
 
 </body>

@@ -8,6 +8,8 @@ use App\Http\Controllers\Homcontroller;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\VerificationController;
+use App\Models\book;
+use App\Models\bookimage;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +26,38 @@ use Illuminate\Support\Facades\Route;
 
 //home
 Route::get('/', [Homcontroller::class,'index'])->name('home');
+
+
+Route::group(['prefix' => 'ajax'],function(){
+
+    Route::get('/product/{id}',function($id){
+        $data = [
+            book::where('id',$id)->get(),
+        ];
+
+        return response()->json($data);
+
+    });
+
+
+
+    Route::get('/bookimage/{id}',function($id){
+        $data = [
+            bookimage::where('book_id',$id)->get(),
+        ];
+
+        return response()->json($data);
+
+    });
+
+
+
+
+
+});
+
+
+
 
 
 //login
@@ -86,6 +120,13 @@ Route::group(['middleware' => ['auth']], function() {
             Route::get('/list_genre',[AdminController::class,'list_genre'])->name('list_genre');
             Route::post('/add_genre',[GenreController::class,'add_genre']);
             Route::get('/delete_genre/{id}',[GenreController::class,'detele_genre']);
+
+
+            //account
+            Route::get('/list_account',[AdminController::class,'list_account'])->name('list_account');
+            Route::get('/delete_account/{id}',[AccountController::class,'detele_account']);
+            Route::get('/edit_account/{id}',[AccountController::class,'edit_account']);
+
 
         });
 

@@ -6,7 +6,10 @@ use App\Models\book;
 use App\Models\author;
 use App\Models\genre;
 use App\Models\publisher;
+use App\Models\User;
 use PhpParser\Node\Expr\FuncCall;
+
+use function Ramsey\Uuid\v1;
 
 class AdminController extends Controller{
 
@@ -23,7 +26,10 @@ class AdminController extends Controller{
 
         $data = [
 
-            'books' => book::get()
+            'books' => book::get(),
+            'authors'=>author::get(),
+            'genres'=>genre::get(),
+            'publisher'=>publisher::get()
 
         ];
 
@@ -58,6 +64,16 @@ class AdminController extends Controller{
         ];
 
         return view('admin/genre/list_genre')->with($data);
+
+    }
+
+
+    public function list_account(){
+        $data = [
+            'accounts' => User::get()
+        ];
+
+        return view('admin/account/list_account')->with($data);
 
     }
 

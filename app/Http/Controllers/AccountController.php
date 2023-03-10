@@ -28,7 +28,9 @@ class AccountController extends Controller{
         if(Auth::attempt([
             'email' =>$request->input('email'),
             'password' =>$request->input('password'),
-            'role_id'=> 1
+            'role_id'=> 1,
+            'status' => 1
+
         ],$remember)){
             return redirect()->route('user');
         }
@@ -36,7 +38,8 @@ class AccountController extends Controller{
         elseif(Auth::attempt([
             'email' =>$request->input('email'),
             'password' =>$request->input('password'),
-            'role_id'=> 2
+            'role_id'=> 2,
+            'status' => 1
         ],$remember)){
 
             return redirect()->route('admin');
@@ -82,6 +85,20 @@ class AccountController extends Controller{
 
         return redirect()->route('register');
 
+    }
+
+
+    public function edit_account($id){
+
+        $data = [
+            'account' => User::find($id),
+
+        ];
+
+
+
+
+        return view('admin/account/edit_account')->with($data);
     }
 
 }

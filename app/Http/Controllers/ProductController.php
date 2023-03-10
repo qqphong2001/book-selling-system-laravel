@@ -111,7 +111,7 @@ class ProductController extends Controller
         $product->description = $request->input('description');
         $product->numPages = $request->input('numpages');
         $product->layout = $request->input('layout');
-        $product->publishDate = $request->input('publishdate');
+        $product->publishDate =  date("Y-m-d", strtotime($request->input('publishdate')))  ;
         $product->weight = $request->input('weight');
         $product->translatorName = $request->input('translatorname');
         $product->hSize = $request->input('hsize');

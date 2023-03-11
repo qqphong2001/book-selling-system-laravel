@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Danh sách tác giả</h1>
+                    <h1 class="m-0">Danh sách vai trò</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Danh sách tác giả</li>
+                        <li class="breadcrumb-item active">Danh sách vai trò</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -28,7 +28,7 @@
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModalScrollableAcc">
-                                Thêm tác giả
+                                Thêm vai trò
                             </button>
 
                             <!-- Modal -->
@@ -37,30 +37,24 @@
                                 <div class="modal-dialog  modal-lg modal-dialog-scrollable" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalScrollableTitle">Thêm tác giả</h5>
+                                            <h5 class="modal-title" id="exampleModalScrollableTitle">Add</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="post" action="{{ url('admin/add_author') }}"
+                                            <form method="post" action="{{ url('admin/add_role') }}"
                                                 enctype="multipart/form-data">
                                                 <!-- form start -->
                                                 @csrf
                                                 {{-- <div class="card-body"> --}}
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Tên tác giả</label>
+                                                            <label for="">Tên vai trò</label>
                                                             <input type="text" class="form-control" id=""
                                                                 name="name">
                                                         </div>
                                                     </div>
-
-
-                                                <div class="form-group ">
-                                                    <label>Miêu tả</label>
-                                                    <textarea id="summernote" name="description"></textarea>
-                                                </div>
                                                 <div class="card-footer">
                                                     <button type="submit" class="btn btn-primary">Thêm</button>
                                                 </div>
@@ -80,27 +74,22 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Tên tác giả</th>
-                                        <th>Miêu tả</th>
+                                        <th>Tên vai trò</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                    @foreach($authors as $author )
+                                    @foreach($roles as $role )
                                     <tr class="product-container-">
-                                        <td> {{$author->id}} </td>
+                                        <td> {{$role->id_role}} </td>
 
-                                        <td> {{$author->name}}</td>
-                                        <td> {{$author->description}}</td>
+                                        <td> {{$role->name_role}}</td>
 
                                         <td>
-
-                                            <button class="btn btn-danger"   onclick="if (window.confirm('Bạn có muốn xóa ?')) { location.href='{{ url('admin/delete_author/'.$author->id) }}'; }">
+                                            <button class="btn btn-danger"    onclick="if (window.confirm('Bạn có muốn xóa ?')) { location.href='{{ url('admin/delete_role/' . $role->id) }}'; }">
                                                 Xóa
                                             </button>
-
-                                           
                                         </td>
                                     </tr>
                                     @endforeach

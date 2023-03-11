@@ -25,7 +25,7 @@ class roleadmin
 
         $user = Auth::user();
 
-        if ($user->role_id == 2) {
+        if ($user->role_id == 3) {
 
         return $next($request);
 

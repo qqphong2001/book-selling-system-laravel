@@ -7,6 +7,7 @@ use App\Http\Controllers\GenreController;
 use App\Http\Controllers\Homcontroller;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublisherController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\VerificationController;
 use App\Models\book;
 use App\Models\bookimage;
@@ -126,8 +127,12 @@ Route::group(['middleware' => ['auth']], function() {
             Route::get('/list_account',[AdminController::class,'list_account'])->name('list_account');
             Route::get('/delete_account/{id}',[AccountController::class,'detele_account']);
             Route::get('/edit_account/{id}',[AccountController::class,'edit_account']);
+            Route::post('/update_account/{id}',[AccountController::class,'update_account']);
 
-
+            //role
+            Route::get('/list_role',[AdminController::class,'list_role'])->name('list_role');
+            Route::post('/add_role',[RoleController::class,'add_role']);
+            Route::get('/delete_role/{id}',[RoleController::class,'detele_role']);
         });
 
 

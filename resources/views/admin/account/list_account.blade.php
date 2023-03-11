@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Account List</h1>
+                    <h1 class="m-0">Danh sách tài khoản</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">List-Account</li>
+                        <li class="breadcrumb-item active">Danh sách tài khoản</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -35,13 +35,13 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>
+                                        <th>Tên</th>
                                         <th>Email</th>
-                                        <th>Role</th>
-                                        <th>Active</th>
-                                        <th>Verify</th>
+                                        <th>Vai trò</th>
+                                        <th>Hoạt động</th>
+                                        <th>Xác nhận mail</th>
 
-                                        <th>Action</th>
+                                        <th></th>
 
                                     </tr>
                                 </thead>
@@ -52,12 +52,12 @@
                                         <td> {{$account->id}} </td>
                                         <td> {{$account->name}}</td>
                                         <td> {{$account->email}}</td>
-                                        <td> {{$account->role == 1 ? 'user' : 'admin'}}</td>
-                                        <td> {{$account->status == 0 ? 'not active' : 'active'}}</td>
-                                        <td> {{$account->email_verified_at !== null ? 'verified' : 'not verified'}}</td>
+                                        <td> {{$account->name_role}}</td>
+                                        <td> {{$account->status == 0 ? 'Không hoạt động' : 'Đang hoạt động'}}</td>
+                                        <td> {{$account->email_verified_at !== null ? 'Đã xác nhận' : 'Chưa xác nhận'}}</td>
                                         <td>
-                                            <button class="btn btn-info">
-                                                <a href="{{ url('admin/edit_account/'.$account->id) }}">Edit</i></a>
+                                            <button class="btn btn-info" onclick="location.href='{{ url('admin/edit_account/'.$account->id) }}'">
+                                                Chỉnh sửa
                                             </button>
                                         </td>
                                     </tr>

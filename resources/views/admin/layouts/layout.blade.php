@@ -111,7 +111,7 @@
                             <a href="{{url('admin/list_product')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Products
+                                    Sản phẩm
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -166,7 +166,7 @@
                             <a href="{{url('/admin/list_publisher')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Publisher
+                                    Nhà xuất bản
                                     <i class="fas fa-angle-left right"></i>
 
                                 </p>
@@ -177,7 +177,7 @@
                             <a href="{{url('/admin/list_author')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Author
+                                    Tác giả
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -187,7 +187,7 @@
                             <a href="{{url('/admin/list_genre')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Genre
+                                    Thể loại
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -197,7 +197,7 @@
                             <a href="{{url('/admin/list_account')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Account
+                                    Tài khoản
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -205,10 +205,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{url('/admin/list-banner')}}" class="nav-link">
+                            <a href="{{url('/admin/list_role')}}" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Banner
+                                    Vai trò
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>

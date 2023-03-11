@@ -6,6 +6,7 @@ use App\Models\book;
 use App\Models\author;
 use App\Models\genre;
 use App\Models\publisher;
+use App\Models\role;
 use App\Models\User;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -70,10 +71,20 @@ class AdminController extends Controller{
 
     public function list_account(){
         $data = [
-            'accounts' => User::get()
+            'accounts' => User::join('role','role.id_role','=','users.role_id')->get(),
         ];
 
         return view('admin/account/list_account')->with($data);
+
+    }
+
+    public function list_role(){
+        $data = [
+
+            'roles' => role::get()
+        ];
+
+        return view('admin/role/list_role')->with($data);
 
     }
 

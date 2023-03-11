@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Product List</h1>
+                    <h1 class="m-0">Danh sách sản phẩm</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">List-product</li>
+                        <li class="breadcrumb-item active">Danh sách sản phẩm</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -28,7 +28,7 @@
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModalScrollableAcc">
-                                Add
+                                Thêm sách
                             </button>
 
                             <!-- Modal -->
@@ -37,7 +37,7 @@
                                 <div class="modal-dialog  modal-lg modal-dialog-scrollable" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalScrollableTitle">Add</h5>
+                                            <h5 class="modal-title" id="exampleModalScrollableTitle">Thêm</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -61,14 +61,14 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Title</label>
+                                                            <label for="">Tựa đề</label>
                                                             <input type="text" class="form-control" id=""
                                                                 name="title">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">NumPages</label>
+                                                            <label for="">Số trang</label>
                                                             <input type="number" class="form-control" id=""
                                                                 name="numpages">
                                                         </div>
@@ -78,7 +78,7 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Publish-Date</label>
+                                                            <label for="">năm phát hành</label>
                                                             <input type="text" name="publishdate" id="Datepicker"
                                                                 class="form-control" required>
                                                         </div>
@@ -86,10 +86,10 @@
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
                                                             <div class="form-group">
-                                                                <label for="">Layout</label>
+                                                                <label for="">Loại bìa</label>
                                                                 <select name="layout" class="form-control" required>
-                                                                    <option value="Paperback">Paperback</option>
-                                                                    <option value="Hardcover">Hardcover</option>
+                                                                    <option value="Paperback">Bìa mềm</option>
+                                                                    <option value="Hardcover">Bìa cứng</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -98,7 +98,7 @@
 
                                                 <div class="">
                                                     <div class="col-sm-6" style="padding: unset;">
-                                                        <label for="">Cover</label>
+                                                        <label for="">Ảnh bìa</label>
                                                         <input type="file" name="photo" id="photo"
                                                             onchange="preview_images();">
                                                     </div>
@@ -108,7 +108,7 @@
 
                                                 <div class="my-3">
                                                     <div class="col-sm-6" style="padding: unset;">
-                                                        <label for="">Thumbnail</label>
+                                                        <label for="">Ảnh nhỏ</label>
                                                         <input type="file" name="thumnails[]" id="photos"
                                                             onchange="preview_imagess();" multiple>
                                                     </div>
@@ -121,14 +121,14 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Weight</label>
+                                                            <label for="">Trọng lượng</label>
                                                             <input type="text" name="weight" class="form-control"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Translator Name</label>
+                                                            <label for="">Người dịch</label>
                                                             <input type="text" name="translatorname"
                                                                 class="form-control" required>
                                                         </div>
@@ -139,14 +139,14 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Height Size</label>
+                                                            <label for="">Chiều dài</label>
                                                             <input type="text" name="hsize" class="form-control"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Weight Size</label>
+                                                            <label for="">Chiều rộng</label>
                                                             <input type="text" name="wsize" class="form-control"
                                                                 required>
                                                         </div>
@@ -156,14 +156,14 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Unit Price</label>
+                                                            <label for="">Giá bán</label>
                                                             <input type="text" name="unitprice" class="form-control"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Unit Stock</label>
+                                                            <label for="">Số lượng</label>
                                                             <input type="text" name="unitstock" class="form-control"
                                                                 required>
                                                         </div>
@@ -173,16 +173,14 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Discount</label>
+                                                            <label for="">Giảm giá</label>
                                                             <input type="text" name="discount" class="form-control"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
-
-
                                                         <div class="form-group">
-                                                            <label for="">Publisher</label>
+                                                            <label for="">Nhà xuất bản</label>
                                                             <div class="input-options">
                                                                 <input type="text" name="publisher" value="0"
                                                                     hidden>
@@ -190,23 +188,18 @@
                                                                     value="">
                                                                 <div class="options" id="publisher-options">
                                                                     @foreach ($publishers as $publisher)
-                                                                        <div class="option" id="{{ $publisher->id }}">
-                                                                            {{ $publisher->name }}</div>
+                                                                        <div class="option" id="{{ $publisher->id }}">{{ $publisher->name }}</div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
-
-
                                                     </div>
                                                 </div>
                                                 <div class="row">
 
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Author</label>
+                                                            <label for="">Tác giả</label>
                                                             <div class="input-options">
                                                                 <input type="text" name="author" value="0"
                                                                     hidden>
@@ -214,8 +207,7 @@
                                                                     value="">
                                                                 <div class="options" id="author-options">
                                                                     @foreach ($authors as $author)
-                                                                        <div class="option" id="{{ $author->id }}">
-                                                                            {{$author->name}}</div>
+                                                                        <div class="option" id="{{ $author->id }}">{{ $author->name }}</div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -224,7 +216,7 @@
 
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Genre</label>
+                                                            <label for="">Thể loại</label>
                                                             <div class="input-options">
                                                                 <input type="text" name="genre" value="0"
                                                                     hidden>
@@ -232,8 +224,7 @@
                                                                     value="">
                                                                 <div class="options" id="genre-options">
                                                                     @foreach ($genres as $genre)
-                                                                        <div class="option" id="{{ $genre->id }}">
-                                                                            {{ $genre->name }}</div>
+                                                                        <div class="option" id="{{ $genre->id }}">{{ $genre->name }}</div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -244,14 +235,14 @@
                                                 </div>
 
                                                 <div class="form-group ">
-                                                    <label>Description</label>
+                                                    <label>Miêu tả</label>
                                                     <textarea id="summernote" name="description"></textarea>
 
                                                 </div>
                                                 <!-- /.card-body -->
 
                                                 <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary">Add</button>
+                                                    <button type="submit" class="btn btn-primary">Thêm</button>
                                                 </div>
 
                                             </form>
@@ -269,12 +260,12 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Unit Price</th>
-                                        <th>Unit Stock</th>
-                                        <th>Cover</th>
-                                        <th>Available</th>
-                                        <th>Action</th>
+                                        <th>Tựa đề</th>
+                                        <th>Giá bán</th>
+                                        <th>Số lượng</th>
+                                        <th>Ảnh bài</th>
+                                        <th>Có sẵn</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -290,28 +281,30 @@
                                                     height="100px">
                                             </td>
                                             <td>
-                                                {{ $book->unitStock > 0 ? 'Yes' : 'No' }}
+                                                {{ $book->unitStock > 0 ? 'Có sẵn' : 'Hết hàng' }}
                                             </td>
 
                                             <td>
-                                                <button class="btn btn-info">
-
-                                                    <a href="#" data-toggle="modal"
-                                                        data-target="#exampleModalScrollableDetail"
-                                                        value="{{ $book->id }}" class="detailModel">Detail </a>
+                                                <button class="btn btn-info detailModel" value="{{ $book->id }}"
+                                                    data-toggle="modal" data-target="#exampleModalScrollableDetail">
 
 
-                                                </button>
 
-                                                <button class="btn btn-success">
-                                                    <a href="{{ url('admin/edit_product/' . $book->id) }}">Edit </a>
+                                                    Chi tiết
+
 
                                                 </button>
 
-                                                <button class="btn btn-danger">
+                                                <button class="btn btn-success"
+                                                    onclick="location.href='{{ url('admin/edit_product/' . $book->id) }}'">
+                                                    Chỉnh sửa
 
-                                                    <a
-                                                        href="{{ url('admin/delete_product/' . $book->id) }}">Delete</i></a>
+                                                </button>
+
+                                                <button class="btn btn-danger"
+                                                    onclick="if (window.confirm('Bạn có muốn xóa ?')) { location.href='{{ url('admin/delete_product/' . $book->id) }}'; }">
+
+                                                    Xóa
 
                                                 </button>
                                             </td>
@@ -355,14 +348,14 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Title</label>
+                                                        <label for="">Tựa đề</label>
                                                         <input type="text" class="form-control" id="booktitle"
                                                             name="title">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">NumPages</label>
+                                                        <label for="">Số trang</label>
                                                         <input type="number" class="form-control" id="booknumpages"
                                                             name="numpages">
                                                     </div>
@@ -372,7 +365,7 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Publish-Date</label>
+                                                        <label for="">Ngày xuất bản</label>
                                                         <input type="text" name="publishdate" id="bookpublishdate"
                                                             class="form-control" required>
                                                     </div>
@@ -380,7 +373,7 @@
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <div class="form-group">
-                                                            <label for="">Layout</label>
+                                                            <label for="">Loại bìa</label>
                                                             <input type="text" id="booklayout" class="form-control"
                                                                 required>
                                                         </div>
@@ -390,7 +383,7 @@
 
                                             <div class="">
                                                 <div class="col-sm-6" style="padding: unset;">
-                                                    <label for="">Cover</label>
+                                                    <label for="">Ảnh bìa</label>
 
                                                 </div>
                                                 <div class="row" id="image_preview"
@@ -403,7 +396,7 @@
 
                                             <div class="my-3">
                                                 <div class="col-sm-6" style="padding: unset;">
-                                                    <label for="">Thumbnail</label>
+                                                    <label for="">Ảnh nhỏ</label>
                                                 </div>
                                                 <div class="row" id="image_previewss">
 
@@ -416,14 +409,14 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Weight</label>
+                                                        <label for="">Trọng lượng</label>
                                                         <input type="text" name="weight" class="form-control"
                                                             required id="bookweight">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Translator Name</label>
+                                                        <label for="">Người dịch</label>
                                                         <input type="text" name="translatorname" class="form-control"
                                                             required id="booktranslatorname">
                                                     </div>
@@ -434,14 +427,14 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Height Size</label>
+                                                        <label for="">Chiều dài</label>
                                                         <input type="text" name="hsize" class="form-control"
                                                             required id="bookhsize">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Weight Size</label>
+                                                        <label for="">Chiều rộng</label>
                                                         <input type="text" name="wsize" class="form-control"
                                                             required id="bookwsize">
                                                     </div>
@@ -451,14 +444,14 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Unit Price</label>
+                                                        <label for="">Giá bán</label>
                                                         <input type="text" name="unitprice" class="form-control"
                                                             required id="bookunitprice">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Unit Stock</label>
+                                                        <label for="">Số lượng</label>
                                                         <input type="text" name="unitstock" class="form-control"
                                                             required id="bookunitstock">
                                                     </div>
@@ -468,14 +461,14 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Discount</label>
+                                                        <label for="">Giảm giá</label>
                                                         <input type="text" name="discount" class="form-control"
                                                             required id="bookdiscount">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Publisher</label>
+                                                        <label for="">Nhà xuất bản</label>
                                                         <input type="text" name="publisher" class="form-control"
                                                             required id="bookpublisher">
                                                     </div>
@@ -484,14 +477,14 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Author</label>
+                                                        <label for="">Tác giả</label>
                                                         <input type="text" name="author" class="form-control"
                                                             required id="bookauthor">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="">Genre</label>
+                                                        <label for="">Thể loại</label>
                                                         <input type="text" name="genre" class="form-control"
                                                             required id="bookgenre">
                                                     </div>
@@ -499,7 +492,7 @@
                                             </div>
 
                                             <div class="form-group ">
-                                                <label>Description</label>
+                                                <label>Miêu tả</label>
                                                 <textarea rows="10" cols="100" name="description" id="bookdes"></textarea>
 
                                             </div>

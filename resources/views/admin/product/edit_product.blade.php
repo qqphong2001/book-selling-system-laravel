@@ -3,7 +3,7 @@
     <div class="modal-content">
         <div class="modal-header"style="justify-content: space-between">
             <button type="button" class="btn btn-primary">
-                <a href="{{ url('admin/list_product') }}" style="color: white">Back</a>
+                <a href="{{ url('admin/list_product') }}" style="color: white">Trờ về</a>
             </button>
 
             <h5 class="modal-title" id="">Edit - {{ $book->title }}</h5>
@@ -11,7 +11,7 @@
         <div class="modal-body">
 
             <!-- form start -->
-            <form method="POST" action="{{ url('admin/update_product/'.$book->id) }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ url('admin/update_product/' . $book->id) }}" enctype="multipart/form-data">
                 @csrf
                 {{-- <div class="card-body"> --}}
                 <div class="row">
@@ -27,14 +27,14 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Title</label>
+                            <label for="">Tựa đề</label>
                             <input type="text" class="form-control" id="" name="title"
                                 value="{{ $book->title }}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">NumPages</label>
+                            <label for="">Số trang</label>
                             <input type="number" class="form-control" id="" name="numpages"
                                 value="{{ $book->numPages }}">
                         </div>
@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Publish-Date</label>
+                            <label for="">Ngày xuất bản</label>
                             <input type="text" name="publishdate" id="Datepicker" class="form-control" required
                                 value="{{ $book->publishDate }}">
                         </div>
@@ -52,11 +52,11 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <div class="form-group">
-                                <label for="">Layout</label>
+                                <label for="">Loại bìa</label>
                                 <select name="layout" class="form-control" required>
-                                    <option value="Paperback" {{ $book->layout == 'Paperback' ? 'checker' : '' }}>Paperback
+                                    <option value="Paperback" {{ $book->layout == 'Paperback' ? 'selected' : '' }}>Bìa cứng
                                     </option>
-                                    <option value="Hardcover" {{ $book->layout == 'Hardcover' ? 'checker' : '' }}>Hardcover
+                                    <option value="Hardcover" {{ $book->layout == 'Hardcover' ? 'selected' : '' }}>Bìa mềm
                                     </option>
                                 </select>
                             </div>
@@ -66,7 +66,7 @@
 
                 <div class="">
                     <div class="col-sm-6" style="padding: unset;">
-                        <label for="">Cover</label>
+                        <label for="">Ảnh bìa</label>
                         <input type="file" name="photo" id="file-input">
                     </div>
                     <div class="row" id="image_preview" style="height50px">
@@ -81,7 +81,7 @@
 
                 <div class="my-3">
                     <div class="col-sm-6" style="padding: unset;">
-                        <label for="">Thumbnail</label>
+                        <label for="">Ảnh nhỏ</label>
                         <input type="file" name="thumnails[]" id="file-inputs" multiple>
                     </div>
                     <div class="row" id="image_previews" style="height50px">
@@ -90,11 +90,10 @@
                             @php $count++ @endphp
 
                             <div class='col-md-2'>
-                                <input type="hidden" value="{{$bookimage->id}}" name={{"bookimage".$count}}>
-                                <img src="{{ $bookimage->image }}" style='width:100%;height:100px' class='img-responsive images'
-                                    alt="" >
+                                <input type="hidden" value="{{ $bookimage->id }}" name={{ 'bookimage' . $count }}>
+                                <img src="{{ $bookimage->image }}" style='width:100%;height:100px'
+                                    class='img-responsive images' alt="">
                             </div>
-
                         @endforeach
 
                     </div>
@@ -106,14 +105,15 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Weight</label>
-                            <input type="text" name="weight" class="form-control" required value="{{$book->weight}}">
+                            <label for="">Trọng lượng</label>
+                            <input type="text" name="weight" class="form-control" required value="{{ $book->weight }}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Translator Name</label>
-                            <input type="text" name="translatorname" class="form-control" value="{{$book->translatorName}}" required>
+                            <label for="">Người dịch</label>
+                            <input type="text" name="translatorname" class="form-control"
+                                value="{{ $book->translatorName }}" required>
                         </div>
                     </div>
 
@@ -122,14 +122,16 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Height Size</label>
-                            <input type="text" name="hsize" class="form-control" required value="{{$book->hSize}}" >
+                            <label for="">Chiều dài</label>
+                            <input type="text" name="hsize" class="form-control" required
+                                value="{{ $book->hSize }}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Weight Size</label>
-                            <input type="text" name="wsize" class="form-control" required value="{{$book->wSize}}">
+                            <label for="">Chiều rộng</label>
+                            <input type="text" name="wsize" class="form-control" required
+                                value="{{ $book->wSize }}">
                         </div>
                     </div>
                 </div>
@@ -137,14 +139,16 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Unit Price</label>
-                            <input type="text" name="unitprice" class="form-control" required value="{{$book->unitPrice}}">
+                            <label for="">Giá bán</label>
+                            <input type="text" name="unitprice" class="form-control" required
+                                value="{{ $book->unitPrice }}">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Unit Stock</label>
-                            <input type="text" name="unitstock" class="form-control" required value="{{$book->unitStock}}">
+                            <label for="">Số lượng</label>
+                            <input type="text" name="unitstock" class="form-control" required
+                                value="{{ $book->unitStock }}">
                         </div>
                     </div>
                 </div>
@@ -152,41 +156,73 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Discount</label>
-                            <input type="text" name="discount" class="form-control" required value="{{$book->discount}}">
+                            <label for="">Giảm giá</label>
+                            <input type="text" name="discount" class="form-control" required
+                                value="{{ $book->discount }}">
                         </div>
                     </div>
                     <div class="col-sm-6">
+
                         <div class="form-group">
-                            <label for="">Publisher</label>
-                            <input type="text" name="publisher" class="form-control" required value="{{$book->publisher_id}}">
+                            <label for="">Nhà xuất bản</label>
+                            <div class="input-options">
+                                <input type="text" name="publisher" value="0" hidden>
+                                <input type="text" class="form-control publisher-text"
+                                    value="{{ $book_publisher->name }}">
+                                <div class="options" id="publisher-options">
+                                    @foreach ($publishers as $publisher)
+                                        <div class="option" id="{{ $publisher->id }}">{{ $publisher->name }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="row">
+
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Author</label>
-                            <input type="text" name="author" class="form-control" required value="{{$book->author_id}}">
+                            <label for="">Tác giả</label>
+                            <div class="input-options">
+                                <input type="text" name="author" value="0" hidden>
+                                <input type="text" class="form-control author-text" value="{{ $book_author->name }}">
+                                <div class="options" id="author-options">
+                                    @foreach ($authors as $author)
+                                        <div class="option" id="{{ $author->id }}">{{ $author->name }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="">Genre</label>
-                            <input type="text" name="genre" class="form-control" required value="{{$book->genre_id}}">
+                            <label for="">Thể loại</label>
+                            <div class="input-options">
+                                <input type="text" name="genre" value="0" hidden>
+                                <input type="text" class="form-control genre-text" value="{{ $book_genre->name }}">
+                                <div class="options" id="genre-options">
+                                    @foreach ($genres as $genre)
+                                        <div class="option" id="{{ $genre->id }}">{{ $genre->name }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
 
                 <div class="form-group ">
-                    <label>Description</label>
-                    <textarea id="summernote" name="description">{{$book->description}}</textarea>
+                    <label>Miêu tả</label>
+                    <textarea id="summernote" name="description">{{ $book->description }}</textarea>
 
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
                 </div>
 
 

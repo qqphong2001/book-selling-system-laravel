@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Genre List</h1>
+                    <h1 class="m-0">Danh sách thể loại</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">List-Genre</li>
+                        <li class="breadcrumb-item active">Danh sách thể loại</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -28,7 +28,7 @@
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModalScrollableAcc">
-                                Add
+                                Thêm thể loại
                             </button>
 
                             <!-- Modal -->
@@ -50,7 +50,7 @@
                                                 {{-- <div class="card-body"> --}}
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Name</label>
+                                                            <label for="">Tên thể loại</label>
                                                             <input type="text" class="form-control" id=""
                                                                 name="name">
                                                         </div>
@@ -59,14 +59,14 @@
 
                                                     <div class="">
                                                         <div class="col-sm-6" style="padding: unset;">
-                                                            <label for="">Cover</label>
+                                                            <label for="">Ảnh bìa</label>
                                                             <input type="file" name="photos[]" id="photo"
                                                                 onchange="preview_images();" multiple>
                                                         </div>
                                                         <div class="row" id="image_preview"></div>
                                                     </div>
                                                 <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="submit" class="btn btn-primary">Thêm</button>
                                                 </div>
 
                                             </form>
@@ -84,9 +84,9 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Action</th>
+                                        <th>Tên thể loại</th>
+                                        <th>Hình</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -101,8 +101,8 @@
                                             </td>
 
                                         <td>
-                                            <button class="btn btn-danger">
-                                                <a href="{{ url('admin/delete_genre/'.$genre->id) }}" onclick="confirm('are you sure ?')">Delete</i></a>
+                                            <button class="btn btn-danger"   onclick="if (window.confirm('Bạn có muốn xóa ?')) { location.href='{{ url('admin/delete_genre/'.$genre->id) }}'; }">
+                                                Xóa
                                             </button>
                                         </td>
                                     </tr>

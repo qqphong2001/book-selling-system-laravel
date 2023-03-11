@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Publisher List</h1>
+                    <h1 class="m-0">Danh sách nhà xuất bản</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">List-Publisher</li>
+                        <li class="breadcrumb-item active">Danh sách nhà xuất bản</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -28,7 +28,7 @@
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModalScrollableAcc">
-                                Add
+                                Thêm nhà xuất bản
                             </button>
 
                             <!-- Modal -->
@@ -50,13 +50,13 @@
                                                 {{-- <div class="card-body"> --}}
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="">Name</label>
+                                                            <label for="">Tên nhà xuất bản</label>
                                                             <input type="text" class="form-control" id=""
                                                                 name="name">
                                                         </div>
                                                     </div>
                                                 <div class="card-footer">
-                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="submit" class="btn btn-primary">Thêm</button>
                                                 </div>
 
                                             </form>
@@ -74,8 +74,8 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Action</th>
+                                        <th>Tên nhà xuất bản</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -87,8 +87,8 @@
                                         <td> {{$publisher->name}}</td>
 
                                         <td>
-                                            <button class="btn btn-danger">
-                                                <a href="{{ url('admin/delete_publisher/'.$publisher->id) }}" onclick="confirm('are you sure ?')">Delete</i></a>
+                                            <button class="btn btn-danger"   onclick="if (window.confirm('Bạn có muốn xóa ?')) { location.href='{{ url('admin/delete_publisher/'.$publisher->id) }}'; }">
+                                                Xóa
                                             </button>
                                         </td>
                                     </tr>

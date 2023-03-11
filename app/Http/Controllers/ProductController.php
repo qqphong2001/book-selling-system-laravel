@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\author;
 use App\Models\book;
 use App\Models\bookimage;
+use App\Models\genre;
+use App\Models\publisher;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -86,10 +89,22 @@ class ProductController extends Controller
 
     public function edit_product($id){
 
+        $book = book::find($id);
         $data= [
-           'book' => book::find($id),
-            'bookimages' => bookimage::where('book_id',$id)->get()
+             'book' => $book,
+            'bookimages' => bookimage::where('book_id',$id)->get(),
+            'authors' => author::get(),
+            'publishers' => publisher::get(),
+            'genres' => genre::get(),
+
+
+            'book_author' => author::join('book','book.author_id','=','author.id')->where('book.id',$id)->first(),
+            'book_publisher'=>publisher::join('book','book.publisher_id','=','publisher.id')->where('book.id',$id)->first(),
+            'book_genre'=>genre::join('book','book.genre_id','=','genre.id')->where('book.id',$id)->first(),
+
         ];
+
+
 
 
         return view('admin/product/edit_product')->with($data);

@@ -10,7 +10,7 @@ class author extends Model
     use HasFactory;
 
     protected $table = 'author';
-    protected $priamryKey = 'id';
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
         'name',

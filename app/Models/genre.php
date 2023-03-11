@@ -10,7 +10,7 @@ class genre extends Model
     use HasFactory;
 
     protected $table = 'genre';
-    protected $priamryKey = 'id';
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
         'name',

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\book;
 use App\Models\author;
+use App\Models\employee;
 use App\Models\genre;
 use App\Models\publisher;
 use App\Models\role;
@@ -86,6 +87,15 @@ class AdminController extends Controller{
 
         return view('admin/role/list_role')->with($data);
 
+    }
+
+    public function employee($id){
+
+        $data = [
+            'employee' => employee::join('users','users.id','=','employee.account_id')->where('employee.account_id',$id)->first()
+        ];
+
+        return view('admin/employee/employee')->with($data);
     }
 
 

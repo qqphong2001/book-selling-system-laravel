@@ -32,15 +32,15 @@
                  @include('account.alter')
                  <form  class="aa-login-form"  action="{{ url('account/process-login') }}" method="post">
                     @csrf
-                  <label for="">Email address<span>*</span></label>
-                   <input type="text" name="email" placeholder="email">
-                   <label for="">Password<span>*</span></label>
-                    <input type="password" name="password" placeholder="Password">
+                  <label for="">Email<span>*</span></label>
+                   <input type="text" name="email" placeholder="Email">
+                   <label for="">Mật khẩu<span>*</span></label>
+                    <input type="password" name="password" placeholder="Mật khẩu">
                     <button type="submit" class="aa-browse-btn">Login</button>
-                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme" name="remember"> Remember me </label>
-                     <p class="aa-lost-password"> Don't Have an Account ? <strong><a href="{{url('account/register')}}">Create an account</a></strong> </p>
+                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme" name="remember"> Ghi nhớ đăng nhập </label>
+                     <p class="aa-lost-password"> Bạn chưa có tài khoản ? <strong><a href="{{url('account/register')}}">Đăng ký tài khoản</a></strong> </p>
 
-                    <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                    <p class="aa-lost-password"><a href="#">Quên mật khẩu ?</a></p>
                   </form>
                 </div>
               </div>

@@ -144,17 +144,18 @@
       <div class="modal-content">
         <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Login or Register</h4>
-          <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
-            <input type="text" placeholder="Username or email">
-            <label for="">Password<span>*</span></label>
-            <input type="password" placeholder="Password">
-            <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+          <h4>Đăng nhập/ Đăng ký</h4>
+          <form class="aa-login-form" action="{{url('account/process-login')}}" method="post">
+            @csrf
+            <label for="">Email<span>*</span></label>
+            <input type="text" placeholder="Email" name="email">
+            <label for="">Mật khẩu<span>*</span></label>
+            <input type="password" placeholder="Mật khẩu" name="password">
+            <button class="aa-browse-btn" type="submit">Đăng nhập</button>
+            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme" name="remember">Ghi nhớ đăng nhập </label>
+            <p class="aa-lost-password"><a href="#">Quên mật khẩu</a></p>
             <div class="aa-register-now">
-              Don't have an account?<a href="account.html">Register now!</a>
+              Bạn chưa có tài khoản<a href="{{url('/account/register')}}">Đăng ký ngay</a>
             </div>
           </form>
         </div>

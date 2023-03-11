@@ -10,7 +10,7 @@ class role extends Model
     use HasFactory;
 
     protected $table = 'role';
-    protected $priamryKey = 'id';
+    protected $primaryKey = 'id_role';
     public $timestamps = false;
     protected $fillable = [
         'name_role',

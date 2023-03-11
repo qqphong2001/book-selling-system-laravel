@@ -22,28 +22,28 @@ class ProductController extends Controller
             $request->photo->move(public_path('upload/cover'),$file->getClientOriginalName());
         }
 
-        $createBook =  book::create([
-            'isbn'=>$request->input('isbn'),
-            'name' => $request->input('name'),
-            'image' =>  isset($photoString) ? $photoString : '',
-            'title' => $request->input('title'),
-            'description' =>$request->input('description'),
-            'numPages' => $request->input('numpages'),
-            'layout' => $request->input('layout'),
-            'publishDate' =>  date("Y-m-d", strtotime($request->input('publishdate'))) ,
-            'weight' => $request->input('weight'),
-            'translatorName' => $request->input('translatorname'),
-            'hSize' => $request->input('hsize'),
-            'wSize' => $request->input('wsize'),
-            'unitPrice' => $request->input('unitprice'),
-            'unitStock' => $request->input('unitstock'),
-            'discount' => $request->input('discount'),
-            'publisher_id' => $request->input('publisher'),
-            'author_id' => $request->input('author'),
-            'genre_id' => $request->input('genre'),
-            'cover' => 'upload/cover/'.$request->file('photo')->getClientOriginalName() !== null ? '/upload/cover/'.$request->file('photo')->getClientOriginalName() : null,
+            $createBook =  book::create([
+                'isbn'=>$request->input('isbn'),
+                'name' => $request->input('name'),
+                'image' =>  isset($photoString) ? $photoString : '',
+                'title' => $request->input('title'),
+                'description' =>$request->input('description'),
+                'numPages' => $request->input('numpages'),
+                'layout' => $request->input('layout'),
+                'publishDate' =>  date("Y-m-d", strtotime($request->input('publishdate'))) ,
+                'weight' => $request->input('weight'),
+                'translatorName' => $request->input('translatorname'),
+                'hSize' => $request->input('hsize'),
+                'wSize' => $request->input('wsize'),
+                'unitPrice' => $request->input('unitprice'),
+                'unitStock' => $request->input('unitstock'),
+                'discount' => $request->input('discount'),
+                'publisher_id' => $request->input('publisher'),
+                'author_id' => $request->input('author'),
+                'genre_id' => $request->input('genre'),
+                'cover' => 'upload/cover/'.$request->file('photo')->getClientOriginalName() !== null ? '/upload/cover/'.$request->file('photo')->getClientOriginalName() : null,
 
-        ]);
+            ]);
 
 
 

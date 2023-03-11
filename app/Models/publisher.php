@@ -10,7 +10,7 @@ class publisher extends Model
     use HasFactory;
 
     protected $table = 'publisher';
-    protected $priamryKey = 'id';
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
         'name',

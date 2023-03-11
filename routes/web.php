@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\Homcontroller;
 use App\Http\Controllers\ProductController;
@@ -133,6 +134,13 @@ Route::group(['middleware' => ['auth']], function() {
             Route::get('/list_role',[AdminController::class,'list_role'])->name('list_role');
             Route::post('/add_role',[RoleController::class,'add_role']);
             Route::get('/delete_role/{id}',[RoleController::class,'detele_role']);
+
+
+            //employee
+            Route::get('/employee/{id}',[AdminController::class,'employee']);
+            Route::post('/update_employee/{id}',[EmployeeController::class,'update_employee']);
+
+
         });
 
 

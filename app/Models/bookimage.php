@@ -10,7 +10,7 @@ class bookimage extends Model
     use HasFactory;
 
     protected $table = 'bookimage';
-    protected $priamryKey = 'id';
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
         'image',

@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daily Shop | Home</title>
-
+    <title>{{$title}}</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('asset/user/img/fahaha.ico')}}">
     <!-- Font awesome -->
     <link href="{{asset('asset/user')}}/css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -105,11 +105,11 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li><a href="account.html">My Account</a></li>
-                  <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
-                  <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
-                  <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                  <li><a href="account.html">Tài khoản</a></li>
+                  <li class="hidden-xs"><a href="wishlist.html">Danh sách yêu thích</a></li>
+                  <li class="hidden-xs"><a href="cart.html">Giỏ hàng</a></li>
+                  <li class="hidden-xs"><a href="checkout.html">Thanh toán</a></li>
+                  <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
                 </ul>
               </div>
             </div>
@@ -127,20 +127,15 @@
             <div class="aa-header-bottom-area">
               <!-- logo  -->
               <div class="aa-logo">
-                <!-- Text based logo -->
-                <a href="index.html">
-                  <span class="fa fa-shopping-cart"></span>
-                  <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
-                </a>
-                <!-- img based logo -->
-                <!-- <a href="index.html"><img src="{{asset('asset/user')}}/img/logo.jpg" alt="logo img"></a> -->
+                <img src="{{asset('asset/user/img/fahaha.png')}}" alt="" width="200px" style="cursor: pointer" onclick="location.href= '/' ">
+
               </div>
               <!-- / logo  -->
                <!-- cart box -->
               <div class="aa-cartbox">
                 <a class="aa-cart-link" href="#">
                   <span class="fa fa-shopping-basket"></span>
-                  <span class="aa-cart-title">SHOPPING CART</span>
+                  <span class="aa-cart-title">Giỏ hàng</span>
                   <span class="aa-cart-notify">2</span>
                 </a>
                 <div class="aa-cartbox-summary">

@@ -58,18 +58,27 @@
                 <a class="nav-link" data-toggle="dropdown" href="#">
 
                         <div class="image" style="text-align:right">
-                            <img src="{{ asset('asset') }}/admin/dist/img/user2-160x160.jpg"
-                                class="img-circle elevation-2" alt="User Image" width="30%">
+
+                            <img src="{{$employessp!== null ? $employessp->avatar : ''}}    "
+                                class="img-circle elevation-2" alt="User Image" width="48px" height="48px">
+
                         </div>
 
 
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="min-width: 100px;top: 135%">
-                  <a href="{{url('account/logout')}}" class="dropdown-item">
+
+                    <a href="{{url('admin/employee/'.Auth::user()->id)}}" class="dropdown-item">
+                        <!-- Message Start -->
+                       Thông tin
+                        <!-- Message End -->
+                      </a>
+                    <a href="{{url('account/logout')}}" class="dropdown-item">
                     <!-- Message Start -->
-                   Log out
+                   Đăng xuất
                     <!-- Message End -->
                   </a>
+
                   <div class="dropdown-divider"></div>
 
                 </div>
@@ -88,13 +97,15 @@
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class=" mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset('asset') }}/admin/dist/img/user2-160x160.jpg"
-                            class="img-circle elevation-2" alt="User Image">
+                        <img src="{{$employessp!== null ? $employessp->avatar : ''}}    "
+                            class="img-circle elevation-2" alt="User Image" width="48px" height="48px">
                     </div>
-                    <div class="info">
-                        <a href="#" class="d-block" style="text-transform: uppercase">{{ Auth::user()->name }}</a>
+                    <div class="info" style="    line-height: 48px;
+                    text-align: center;
+                    margin-left: 20px;">
+                        <a href="#" class="d-block" style="text-transform: uppercase">{{ $employessp->lastName }}</a>
                     </div>
                 </div>
 
@@ -391,6 +402,8 @@
         $(function() {
             $("#Datepicker").datepicker();
             $("#endDatepicker").datepicker();
+            $("#dobss").datepicker();
+
         });
     </script>
 

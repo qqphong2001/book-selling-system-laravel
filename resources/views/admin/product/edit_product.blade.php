@@ -237,8 +237,6 @@
     <script>
         const fileInput = document.getElementById('file-input');
         const previewImg = document.getElementById('preview-img');
-
-
         const fileInputs = document.getElementById('file-inputs');
         const images = document.querySelectorAll('.images');
 

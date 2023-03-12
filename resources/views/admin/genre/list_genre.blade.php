@@ -95,7 +95,7 @@
                                     <tr class="product-container-">
                                         <td> {{$genre->id}} </td>
 
-                                        <td> {{$genre->name}}</td>
+                                        <td> {{$genre->name_genre}}</td>
                                         <td>
                                             <img src="{{$genre->image}}" alt="" width="100px" height="100px">
                                             </td>

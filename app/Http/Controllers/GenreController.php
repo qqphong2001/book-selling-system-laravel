@@ -17,16 +17,16 @@ class GenreController extends Controller
             $photoPaths = [];
 
             foreach($files as $f){
-                $photoPath = $f->storeAs('upload/genre',$f->getClientOriginalName());
-                $photoPaths[] = asset($photoPath);
+                $photoPath = $f->storeAs('/upload/genre',$f->getClientOriginalName());
+                $photoPaths[] = $photoPath;
                 $photoString = implode(',', $photoPaths);
                 $f->move(public_path('upload/genre'),$f->getClientOriginalName());
             }
         }
 
         genre::create([
-            'name' => $request->input('name'),
-            'image' =>  isset($photoString) ? $photoString : '',
+            'name_genre' => $request->input('name'),
+            'image' =>  isset($photoString) ? '/'.$photoString : '',
 
         ]);
 

@@ -84,7 +84,7 @@
                                     <tr class="product-container-">
                                         <td> {{$publisher->id}} </td>
 
-                                        <td> {{$publisher->name}}</td>
+                                        <td> {{$publisher->name_publisher}}</td>
 
                                         <td>
                                             <button class="btn btn-danger"   onclick="if (window.confirm('Bạn có muốn xóa ?')) { location.href='{{ url('admin/delete_publisher/'.$publisher->id) }}'; }">

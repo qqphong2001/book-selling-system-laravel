@@ -88,8 +88,8 @@
                                                             <div class="form-group">
                                                                 <label for="">Loại bìa</label>
                                                                 <select name="layout" class="form-control" required>
-                                                                    <option value="Paperback">Bìa mềm</option>
-                                                                    <option value="Hardcover">Bìa cứng</option>
+                                                                    <option value="Bìa mềm">Bìa mềm</option>
+                                                                    <option value="Bìa cứng">Bìa cứng</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -188,7 +188,7 @@
                                                                     value="">
                                                                 <div class="options" id="publisher-options">
                                                                     @foreach ($publishers as $publisher)
-                                                                        <div class="option" id="{{ $publisher->id }}">{{ $publisher->name }}</div>
+                                                                        <div class="option" id="{{ $publisher->id }}">{{ $publisher->name_publisher }}</div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -207,7 +207,7 @@
                                                                     value="">
                                                                 <div class="options" id="author-options">
                                                                     @foreach ($authors as $author)
-                                                                        <div class="option" id="{{ $author->id }}">{{ $author->name }}</div>
+                                                                        <div class="option" id="{{ $author->id }}">{{ $author->name_author }}</div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -224,7 +224,7 @@
                                                                     value="">
                                                                 <div class="options" id="genre-options">
                                                                     @foreach ($genres as $genre)
-                                                                        <div class="option" id="{{ $genre->id }}">{{ $genre->name }}</div>
+                                                                        <div class="option" id="{{ $genre->id }}">{{ $genre->name_genre }}</div>
                                                                     @endforeach
                                                                 </div>
                                                             </div>

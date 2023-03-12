@@ -15,7 +15,7 @@ class AccountController extends Controller
     //login
     public function loginShow()
     {
-        return view('account/login');
+        return view('account/login')->with('title','Đăng nhập');
     }
 
     public function loginProcess(Request $request)
@@ -50,7 +50,7 @@ class AccountController extends Controller
                     'password' => $request->input('password'),
                     'role_id' => 2
                 ], $remember)) {
-                    return redirect()->route('user');
+                    return redirect()->route('user')->with('title','Trang chủ');
                 } elseif (Auth::attempt([
                     'email' => $request->input('email'),
                     'password' => $request->input('password'),
@@ -64,7 +64,7 @@ class AccountController extends Controller
         } else {
             Session()->flash('error', 'Tên đăng nhập hoặc mật khẩu không chính xác');
         }
-        return redirect()->route('login');
+        return redirect()->route('login')->with('title','Đăng nhập');
     }
 
     public function logout()
@@ -79,7 +79,7 @@ class AccountController extends Controller
     public function registerShow()
     {
 
-        return view('account/register');
+        return view('account/register')->with('title','Đăng ký');
     }
 
 
@@ -112,7 +112,7 @@ class AccountController extends Controller
         Session()->flash('success', 'Bạn đã đăng kí thành công, Vui lòng xác thực email');
 
 
-        return redirect()->route('register');
+        return redirect()->route('register')->with('title','Đăng ký');
     }
 
 

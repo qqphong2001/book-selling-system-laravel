@@ -70,8 +70,10 @@ Route::post('/account/process-register',[AccountController::class,'registerProce
 Route::post('/account/process-login',[AccountController::class,'loginProcess']);
 Route::get('/account/logout',[AccountController::class,'logout']);
 
-
-
+Route::get('/product/detail/{id}',[ProductController::class,'detail_product']);
+Route::get('/product/index',[ProductController::class,'index'])->name('product');
+Route::post('/product/search',[ProductController::class,'search']);
+Route::post('/product/sortby',[ProductController::class,'sortBy']);
 
 
 
@@ -81,6 +83,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/email/verify', [VerificationController::class,'show'])->name('verification.notice');
     Route::get('/email/verify/{id}/{hash}', [VerificationController::class,'verify'])->name('verification.verify')->middleware(['signed']);
     Route::post('/email/resend',  [VerificationController::class,'resend'])->name('verification.resend');
+
+
+
     Route::group(['middleware' => ['verified']], function() {
 
     //user

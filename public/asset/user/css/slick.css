@@ -144,7 +144,7 @@
     line-height: 0;
 
     position: absolute;
-    top: -40px;
+    top: -47px;
 
     display: block;
 
@@ -157,7 +157,7 @@
 
     color: transparent;
     border: none;
-    outline: none; 
+    outline: none;
     z-index: 99;
 }
 .slick-prev:hover,
@@ -199,7 +199,7 @@
 
 .slick-prev
 {
-    left: 94%;
+    left: 92%;
 }
 [dir='rtl'] .slick-prev
 {
@@ -217,7 +217,7 @@
 
 .slick-next
 {
-    right: 0;
+    right: 20px;
 }
 [dir='rtl'] .slick-next
 {

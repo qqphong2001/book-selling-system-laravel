@@ -13,7 +13,7 @@ class publisher extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
-        'name',
+        'name_publisher',
     ];
 }
 ?>

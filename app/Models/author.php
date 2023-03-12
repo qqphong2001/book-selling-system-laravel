@@ -13,8 +13,8 @@ class author extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
-        'name',
-        'description'
+        'name_author',
+        'description_author'
     ];
 }
 ?>

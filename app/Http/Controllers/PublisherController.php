@@ -11,7 +11,7 @@ class PublisherController extends Controller
 
 
         publisher::create([
-            'name' => $request->input('name')
+            'name_publisher' => $request->input('name')
         ]);
 
 

@@ -11,6 +11,59 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function index(){
+
+        $title = "Trang sản phẩm";
+        $productAll = book::get();
+
+
+        return view('user/product/index',compact('title','productAll'));
+    }
+
+    public function sortBy(Request $request){
+
+        $title = "Trang sản phẩm";
+        $productAll = book::orderByDesc($request->value)->get();
+
+
+        return response()->json([
+            'status' => 'success',
+            'productHtml' => view('user/product/index', compact('productAll'))->render()
+        ]);
+    }
+
+
+    public function search(Request $request){
+        $title = "Trang sản phẩm";
+
+        $productAll = book::where('title','like','%'.$request->input('search').'%')->get();
+
+
+
+        return view('user/product/index',compact('title','productAll'));
+    }
+
+
+
+    public function detail_product($id){
+
+        $title = "Chi tiết sản phẩm";
+        $product = book::join('author','author.id','=','book.author_id')
+        ->join('publisher','publisher.id','=','book.author_id')
+        ->join('genre','genre.id','=','book.genre_id')
+        ->where('book.id',$id)
+        ->first();
+
+        $product_images = bookimage::where('book_id',$id)->get();
+        $product_genres = book::where('genre_id',$product->id)->where('id','!=',$id)->get() ;
+
+        $product_view = book::find($id);
+        $product_view->view = $product_view->view + 1;
+        $product_view->update();
+
+        return view('user/product/detail_product',compact('title','product','product_images','product_genres'));
+    }
+
     public function add_product(Request $request ){
 
         $files = $request->file('thumnails');

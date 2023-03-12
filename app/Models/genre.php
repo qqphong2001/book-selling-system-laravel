@@ -13,7 +13,7 @@ class genre extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
-        'name',
+        'name_genre',
         'image'
     ];
 }

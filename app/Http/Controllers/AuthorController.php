@@ -10,8 +10,8 @@ class AuthorController extends Controller
     public function add_author(Request $request){
 
         author::create([
-            'name' =>  $request->input('name'),
-            'desciption' => $request->input('description')
+            'name_author' =>  $request->input('name'),
+            'desciption_author' => $request->input('description')
 
         ]);
 

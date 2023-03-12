@@ -54,9 +54,9 @@
                             <div class="form-group">
                                 <label for="">Loại bìa</label>
                                 <select name="layout" class="form-control" required>
-                                    <option value="Paperback" {{ $book->layout == 'Paperback' ? 'selected' : '' }}>Bìa cứng
+                                    <option value="Bìa cứng" {{ $book->layout == 'Paperback' ? 'selected' : '' }}>Bìa cứng
                                     </option>
-                                    <option value="Hardcover" {{ $book->layout == 'Hardcover' ? 'selected' : '' }}>Bìa mềm
+                                    <option value="Bìa mềm" {{ $book->layout == 'Hardcover' ? 'selected' : '' }}>Bìa mềm
                                     </option>
                                 </select>
                             </div>
@@ -166,12 +166,12 @@
                         <div class="form-group">
                             <label for="">Nhà xuất bản</label>
                             <div class="input-options">
-                                <input type="text" name="publisher" value="0" hidden>
+                                <input type="text" name="publisher" value="{{$book->publisher_id}}" hidden>
                                 <input type="text" class="form-control publisher-text"
-                                    value="{{ $book_publisher->name }}">
+                                    value="{{ $book_publisher->name_publisher }}">
                                 <div class="options" id="publisher-options">
                                     @foreach ($publishers as $publisher)
-                                        <div class="option" id="{{ $publisher->id }}">{{ $publisher->name }}</div>
+                                        <div class="option" id="{{ $publisher->id }}">{{ $publisher->name_publisher }}</div>
                                     @endforeach
                                 </div>
                             </div>
@@ -185,11 +185,11 @@
                         <div class="form-group">
                             <label for="">Tác giả</label>
                             <div class="input-options">
-                                <input type="text" name="author" value="0" hidden>
-                                <input type="text" class="form-control author-text" value="{{ $book_author->name }}">
+                                <input type="text" name="author" value="{{$book->author_id}}" hidden>
+                                <input type="text" class="form-control author-text" value="{{ $book_author->name_author }}">
                                 <div class="options" id="author-options">
                                     @foreach ($authors as $author)
-                                        <div class="option" id="{{ $author->id }}">{{ $author->name }}</div>
+                                        <div class="option" id="{{ $author->id }}">{{ $author->name_author }}</div>
                                     @endforeach
                                 </div>
                             </div>
@@ -200,11 +200,11 @@
                         <div class="form-group">
                             <label for="">Thể loại</label>
                             <div class="input-options">
-                                <input type="text" name="genre" value="0" hidden>
-                                <input type="text" class="form-control genre-text" value="{{ $book_genre->name }}">
+                                <input type="text" name="genre" value="{{$book->genre_id}}" hidden>
+                                <input type="text" class="form-control genre-text" value="{{ $book_genre->name_genre }}">
                                 <div class="options" id="genre-options">
                                     @foreach ($genres as $genre)
-                                        <div class="option" id="{{ $genre->id }}">{{ $genre->name }}</div>
+                                        <div class="option" id="{{ $genre->id }}">{{ $genre->name_genre }}</div>
                                     @endforeach
                                 </div>
                             </div>

@@ -91,8 +91,8 @@
                                     <tr class="product-container-">
                                         <td> {{$author->id}} </td>
 
-                                        <td> {{$author->name}}</td>
-                                        <td> {{$author->description}}</td>
+                                        <td> {{$author->name_author}}</td>
+                                        <td> {{$author->description_author}}</td>
 
                                         <td>
 
@@ -100,7 +100,7 @@
                                                 Xóa
                                             </button>
 
-                                           
+
                                         </td>
                                     </tr>
                                     @endforeach

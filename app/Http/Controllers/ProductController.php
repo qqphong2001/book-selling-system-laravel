@@ -227,5 +227,13 @@ class ProductController extends Controller
 
 
     }
+
+    public function product_hot(){
+
+        $title = "Sản phẩm nổi bật";
+        $productAll = book::orderByDesc('view')->get();
+
+        return view('user/product_hot/index',compact('title','productAll'));
+    }
 }
 ?>

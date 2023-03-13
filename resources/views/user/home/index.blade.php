@@ -146,7 +146,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row" style="background-color: white;padding:20px;border-radius:10px;height:395px">
-                        <div class="aa-popular-category-area">
+                        <div class="aa-popular-category-area" style="height: 250px">
                             <!-- start prduct navigation -->
                             <ul class="nav nav-tabs aa-products-tab">
                                 <li class="active" style="float: left"><a href="#popular" data-toggle="tab">Danh mục sản phẩm</a></li>
@@ -200,7 +200,9 @@
                                 </div>
 
                                     <a href="#popular" data-toggle="tab" style="display: inline-block;border:none;margin:0;padding:0">Sản phẩm nổi bật</a></li>
-                            </ul>
+
+
+                                </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane fade in active" id="popular">
@@ -323,40 +325,7 @@
 
     <!-- / popular section -->
     <!-- Support section -->
-    <section id="aa-support">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="aa-support-area">
-                        <!-- single support -->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="aa-support-single">
-                                <span class="fa fa-truck"></span>
-                                <h4>FREE SHIPPING</h4>
-                                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, nobis.</P>
-                            </div>
-                        </div>
-                        <!-- single support -->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="aa-support-single">
-                                <span class="fa fa-clock-o"></span>
-                                <h4>30 DAYS MONEY BACK</h4>
-                                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, nobis.</P>
-                            </div>
-                        </div>
-                        <!-- single support -->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="aa-support-single">
-                                <span class="fa fa-phone"></span>
-                                <h4>SUPPORT 24/7</h4>
-                                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, nobis.</P>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- / Support section -->
     <!-- Testimonial -->
     <section id="aa-testimonial">
@@ -367,54 +336,15 @@
                         <ul class="aa-testimonial-slider">
                             <!-- single slide -->
                             <li>
-                                <div class="aa-testimonial-single">
-                                    <img class="aa-testimonial-img"
-                                        src="{{ asset('asset/user') }}/img/testimonial-img-2.jpg"
-                                        alt="testimonial img">
-                                    <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
-                                        possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
-                                        possimus, facere, quidem qui.</p>
-                                    <div class="aa-testimonial-info">
-                                        <p>Allison</p>
-                                        <span>Designer</span>
-                                        <a href="#">Dribble.com</a>
-                                    </div>
-                                </div>
+                                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/GHN840x320.png" alt="" width="100%">
                             </li>
                             <!-- single slide -->
                             <li>
-                                <div class="aa-testimonial-single">
-                                    <img class="aa-testimonial-img"
-                                        src="{{ asset('asset/user') }}/img/testimonial-img-1.jpg"
-                                        alt="testimonial img">
-                                    <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
-                                        possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
-                                        possimus, facere, quidem qui.</p>
-                                    <div class="aa-testimonial-info">
-                                        <p>KEVIN MEYER</p>
-                                        <span>CEO</span>
-                                        <a href="#">Alphabet</a>
-                                    </div>
-                                </div>
+                                <img src="https://cdn0.fahasa.com/media/magentothem/banner7/ninjavan840x320.png" alt="" width="100%">
                             </li>
                             <!-- single slide -->
                             <li>
-                                <div class="aa-testimonial-single">
-                                    <img class="aa-testimonial-img"
-                                        src="{{ asset('asset/user') }}/img/testimonial-img-3.jpg"
-                                        alt="testimonial img">
-                                    <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis
-                                        possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis
-                                        possimus, facere, quidem qui.</p>
-                                    <div class="aa-testimonial-info">
-                                        <p>Luner</p>
-                                        <span>COO</span>
-                                        <a href="#">Kinatic Solution</a>
-                                    </div>
-                                </div>
+                               <img src="{{asset('asset/user/img/noi-chim-troi-lam-to-banner.jpg')}}" width="100%" height="434.28px" alt="">
                             </li>
                         </ul>
                     </div>
@@ -424,6 +354,40 @@
     </section>
     <!-- / Testimonial -->
 
+    <section id="aa-support" style="margin: 40px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="aa-support-area">
+                        <!-- single support -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="aa-support-single">
+                                <span class="fa fa-truck"></span>
+                                <h4>Miễn phí giao hàng</h4>
+                                <P></P>
+                            </div>
+                        </div>
+                        <!-- single support -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="aa-support-single">
+                                <span class="fa fa-clock-o"></span>
+                                <h4>30 ngày đổi trả</h4>
+                                <P></P>
+                            </div>
+                        </div>
+                        <!-- single support -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="aa-support-single">
+                                <span class="fa fa-phone"></span>
+                                <h4>Tổng đài 24/7</h4>
+                                <P></P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Latest Blog -->
     <section id="aa-latest-blog">
         <div class="container">

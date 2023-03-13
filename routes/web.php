@@ -75,6 +75,8 @@ Route::get('/product/index',[ProductController::class,'index'])->name('product')
 Route::post('/product/search',[ProductController::class,'search']);
 Route::post('/product/sortby',[ProductController::class,'sortBy']);
 Route::get('product/product-hot',[ProductController::class,'product_hot']);
+Route::get('product/product-discount',[ProductController::class,'product_discount']);
+
 
 
 

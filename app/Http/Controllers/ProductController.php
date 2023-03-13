@@ -235,5 +235,16 @@ class ProductController extends Controller
 
         return view('user/product_hot/index',compact('title','productAll'));
     }
+
+    public function product_discount(){
+        $title = "Sản phẩm giảm giá";
+
+        $productAll = book::where('discount','>',0)->get();
+
+        return view('user/product_discount/index',compact('title','productAll'));
+
+
+
+    }
 }
 ?>

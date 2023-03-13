@@ -11,6 +11,7 @@
     <title>{{$title}}</title>
     <link rel="icon" type="image/x-icon" href="{{asset('asset/user/img/fahaha.ico')}}">
     <link href="{{asset('asset')}}/css/app.css" rel="stylesheet">
+    <link href="{{asset('asset')}}/css/comment/jquery-comments.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Font awesome -->
     <link href="{{asset('asset/user')}}/css/font-awesome.css" rel="stylesheet">

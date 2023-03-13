@@ -194,6 +194,14 @@
   <script type="text/javascript" src="{{ url('asset/user') }}/js/slick.js"></script>
   <!-- Price picker slider -->
   <script type="text/javascript" src="{{ url('asset/user') }}/js/nouislider.js"></script>
+
+  <script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
+  <script type="text/javascript" src="{{ url('asset/js') }}/comment/jquery-comment.js"></script>
+  <script type="text/javascript" src="{{ url('asset/js') }}/comment/comment.js"></script>
+  <script type="text/javascript" src="{{ url('asset/js') }}/comment/comment-data.js"></script>
+  <script type="text/javascript" src="{{ url('asset/js') }}/app.js"></script>
+
   <!-- Custom js -->
   <script src="{{ url('asset/user') }}/js/custom.js"></script>
 

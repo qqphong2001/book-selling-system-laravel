@@ -105,7 +105,7 @@
                     <div class="info" style="    line-height: 48px;
                     text-align: center;
                     margin-left: 20px;">
-                        <a href="#" class="d-block" style="text-transform: uppercase">{{ $employessp->lastName }}</a>
+                        <a href="#" class="d-block" style="text-transform: uppercase">{{ $employessp!== null ? $employessp->lastName : '' }}</a>
                     </div>
                 </div>
 

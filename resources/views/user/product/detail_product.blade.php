@@ -45,9 +45,8 @@
                                                 class="aa-product-price" style="color: #888888"><del>  {{ number_format($product->unitPrice,0,'.',',') }}đ</del></span>
 
                                                 @else
-                                            <span class="aa-product-view-price"
-                                            style="color: #C92127;font-size:30px;font-weight: 600;">
-                                            {{ number_format($product->unitPrice, 0, ',', '.') }}đ</span>
+                                                <span class="aa-product-view-price" style="color: #C92127;font-size:30px;font-weight: 600;">
+                                                    {{ number_format($product->unitPrice, 0, ',', '.') }}đ</span>
                                                @endif
 
                                                 <p>Lượt xem : {{$product->view}}</p>
@@ -55,10 +54,25 @@
                                                 <span>{{ $product->unitStock > 0 ? 'Còn hàng' : 'Hết hàng' }}</span>
                                             </p>
                                         </div>
+
+                                        <div class="aa-price-block">
+                                            <div class="product-ranking-box">
+                                                @for ($i = 1; $i <= 5; $i++)
+                                                    @if($i < $product->ranking)
+                                                        <i class='bx bxs-star'></i>
+                                                    @elseif (($i - $product->ranking) == 0.5)
+                                                        <i class='bx bxs-star-half'></i>
+                                                    @else
+                                                        <i class='bx bx-star' ></i>
+                                                    @endif
+                                                @endfor
+                                                <span>{{ $product->ranking }}</span>
+                                            </div>
+                                        </div>
+
                                         <div class="aa-price-block" style="margin: 20px 0">
                                             <span class="aa-product-view-price">Nhà xuất bản : <span>
                                                     {{ $product->name_publisher }}</span> </span>
-
                                         </div>
 
                                         <div class="aa-price-block" style="margin: 20px 0">

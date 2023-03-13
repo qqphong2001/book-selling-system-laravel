@@ -226,7 +226,7 @@
 
                                         @endforeach
                                     </ul>
-                                    <a class="aa-browse-btn" href="#" style="position: absolute;
+                                    <a class="aa-browse-btn" href="{{url('product/product-hot')}}" style="position: absolute;
                                     top: 390px;left:500px;border:2px solid #c92127;background-color: white;color:#c92127
                                     ;font-weight:600;border-radius:10px;
                                     ">Xem thêm <span
@@ -260,6 +260,7 @@
                                         </div>
 
                                         <a href="#men" data-toggle="tab" style="display: inline-block;border:none;margin:0;padding:0">Đang được giảm giá</a>
+
                                     </li>
                                 </ul>
                                 <!-- Tab panes -->
@@ -290,7 +291,7 @@
 
                                             @endforeach
                                         </ul>
-                                        <a class="aa-browse-btn" href="#" style="position: absolute;
+                                        <a class="aa-browse-btn" href="{{url('product/product-discount')}}" style="position: absolute;
                                         top: 390px;left:500px;border:2px solid #c92127;background-color: white;color:#c92127
                                         ;font-weight:600;border-radius:10px;
                                         ">Xem thêm <span
